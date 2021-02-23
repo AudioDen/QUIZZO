@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: goldenrod;
+}
+
+.quizbox {
+    width: 800px;
+    max-width: 75%;
+    background-color: honeydew;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns:repeat(3);
+    gap: 25px;
+    margin: 40px;
+}
+
+.btn{
+    border: 3px solid;
+    border-color: black;
+    background-color: lightslategray;
+    border-radius: 25px;
+    padding: 10px 15px;
+    color: linen;
+    outline: none;
+    font-size: 25px;
+}
+
+.btn:hover {
+    background-color: burlywood;
+}
+.btn:active {
+    transform: translateY(6px);
+}
+
+.begin-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.continue-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.be-con {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
