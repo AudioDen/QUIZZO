@@ -9,11 +9,33 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: goldenrod;
 }
+header {
+    margin:10%;
+    padding: 50px;
+    font-size: 45px;
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: indianred;
+}
 
+.clock {
+    margin:5%;
+    padding: 5%;
+    text-align: center;
+    color:bisque;
+    font-size: 45px;
+    font-weight: bolder;
+    background-size: cover;
+    background-image: 50%;
+    background-color: lightseagreen; 
+
+
+}
 .quizbox {
     width: 800px;
     max-width: 75%;
@@ -21,7 +43,11 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
-
+.question {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
 .choice-grid {
     display: grid;
     grid-template-columns:repeat(3);
@@ -38,6 +64,12 @@ body {
     color: linen;
     outline: none;
     font-size: 25px;
+}
+.correct {
+    background-color: darkseagreen ;
+}
+.wrong {
+    background-color: firebrick;
 }
 
 .btn:hover {
@@ -65,6 +97,6 @@ body {
     align-items: center;
 }
 
-.hide {
+ .hide {
     display: none;
-}
+} 
