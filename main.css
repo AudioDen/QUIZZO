@@ -23,9 +23,15 @@ header {
     background-color: indianred;
 }
 
+.image {
+    max-width: 300px;
+    max-height: 250px;
+}
+
 .clock {
-    margin:5%;
-    padding: 5%;
+     margin:1%; 
+    padding: 1%;
+    border-radius: 20px;
     text-align: center;
     color:bisque;
     font-size: 45px;
