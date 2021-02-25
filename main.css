@@ -15,7 +15,7 @@ body {
     background-color: goldenrod;
 }
 header {
-    margin:10%;
+    /* margin:10%; */
     padding: 50px;
     font-size: 45px;
     font-weight: 900;
@@ -47,7 +47,7 @@ header {
     max-width: 75%;
     background-color: honeydew;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 .question {
     text-align: center;

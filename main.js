@@ -18,12 +18,14 @@ var currentQuestionsIndex
 var clockElement = document.getElementById("clock")
 var secondsLeft = 30
 function setTime() {
+    console.log("the time")//// notes
     var timerInterval = setInterval(function() {
         secondsLeft--;
         clockElement.textContent = "TIME*(" + secondsLeft + ")*TIME";
-
+    
         if(secondsLeft === 0) {
             clearInterval(timerInterval)
+           
         }
     }, 1000);
 }
@@ -43,6 +45,7 @@ function beginGame(){
     console.log("the mix is above!")
     //calling 2 functions
     setNextQuestion()
+    console.log("setnext")
     setTime()
 
 }
@@ -70,9 +73,10 @@ function showQuestion(question){
     //create button / put answer in button
     question.answers.forEach(answer => {
         var button = document.createElement("button")
+        console.log("button create")
         button.innerText = answer.text
         button.classList.add("btn")
-
+        console.log("button css")
         if(answer.correct) {
             button.dataset.correct = answer.correct
         }
@@ -108,7 +112,7 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong")
-
+    console.log("correct and wrong")
 }
 ///????
 var queImage = document.getElementById("image")
