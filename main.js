@@ -46,8 +46,11 @@ function beginGame(){
     //calling 2 functions
     setNextQuestion()
     console.log("setnext")
-    setTime()
 
+    setTime() 
+    console.log("clock is running")
+    score()
+    console.log("score funk")
 }
 
 function setNextQuestion(){
@@ -63,9 +66,6 @@ function resetState(){
     }
     
 }
-
-
-
 
 function showQuestion(question){
     //setting question in questbox
@@ -97,8 +97,26 @@ function selectAnswer(e) {
 
     continueButton.classList.remove("hide")
 }
+var txtRight = document.getElementById("correct")
+var txtWrong = document.getElementById("wrong")
+var txtTotal = document.getElementById("total")
 
+var right=  0
+var wrong=  0
+var total=  0
+function score(){
+    console.log("score function ")
+ if(question === true){
+       right++;
+       total++;
+       txtRight.textContent(right)
+       txtTotal.textContent(total)
 
+   }
+ if(question === false)
+       wrong++;
+       txtWrong.textContent(total) 
+}
 // changes the button via css bassed on answer before selected
 function setStatusClass(element, correct) {
     clearStatusClass(element)

@@ -15,11 +15,10 @@ body {
     background-color: goldenrod;
 }
 header {
-    /* margin:10%; */
-    padding: 50px;
-    font-size: 45px;
-    font-weight: 900;
-    border-radius: 50%;
+     margin:1%; 
+     padding: 10px;
+    font-size: 35px;
+    border-radius: 30%;
     background-color: indianred;
 }
 
