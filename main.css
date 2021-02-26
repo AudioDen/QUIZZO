@@ -21,7 +21,11 @@ header {
     border-radius: 30%;
     background-color: indianred;
 }
-
+.scoreboard{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
 .image {
     max-width: 300px;
     max-height: 250px;
@@ -43,6 +47,7 @@ header {
 }
 .quizbox {
     width: 800px;
+    height: 500px;
     max-width: 75%;
     background-color: honeydew;
     border-radius: 10px;
@@ -97,7 +102,7 @@ header {
 
 .be-con {
     display: flex;
-    padding: 25px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 }

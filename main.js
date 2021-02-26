@@ -41,7 +41,7 @@ function beginGame(){
     console.log("let the hide games begin")
     // mix the questions here 
     currentQuestionsIndex = 0
-    mixoQuestions = questions.sort(() => Math.random - .5)
+    mixoQuestions = questions.sort(() => Math.random + .5)
     console.log("the mix is above!")
     //calling 2 functions
     setNextQuestion()
@@ -81,7 +81,7 @@ function showQuestion(question){
             button.dataset.correct = answer.correct
         }
         //listner is for selectAnswer function
-        button.addEventListener("click", selectAnswer)
+        button.addEventListener("click", selectAnswer,score)
         
         choiceButtonElement.appendChild(button)
     })
@@ -97,6 +97,8 @@ function selectAnswer(e) {
 
     continueButton.classList.remove("hide")
 }
+/// got to getthe score happenung
+
 var txtRight = document.getElementById("correct")
 var txtWrong = document.getElementById("wrong")
 var txtTotal = document.getElementById("total")
@@ -109,13 +111,13 @@ function score(){
  if(question === true){
        right++;
        total++;
-       txtRight.textContent(right)
-       txtTotal.textContent(total)
+       txtRight.textContent= right
+       txtTotal.textContent= total
 
    }
  if(question === false)
        wrong++;
-       txtWrong.textContent(total) 
+       txtWrong.innerHTML = wrong 
 }
 // changes the button via css bassed on answer before selected
 function setStatusClass(element, correct) {
@@ -173,6 +175,73 @@ var questions = [
             {text: "chirp a chirp", correct: false},
             {text: " chirp   chirp chirp", correct: true},
             {text: "chirp chirp chirp chirp", correct: false} 
+        ]
+        
+        
+    },
+    {
+        question: "who let the bee's out!?!?!?",
+        answers: [
+            {text: "buzz", correct: false},
+            {text: "buzz a buzz", correct: false},
+            {text: " buzz   buzz buzz", correct: false},
+            {text: "buzz buzz buzz buzz", correct: true} 
+        ]
+        
+        
+    },
+    {
+        question: "who let the bee's out!?!?!?",
+        answers: [
+            {text: "buzz", correct: false},
+            {text: "buzz a buzz", correct: false},
+            {text: " buzz   buzz buzz", correct: false},
+            {text: "buzz buzz buzz buzz", correct: true} 
+        ]
+        
+        
+    },
+    {
+        question: "who let the doggs out!?!?!?",
+        answers: [
+            {text: "roof", correct: true},
+            {text: "roof a roof", correct: false},
+            {text: " roof   roof roof", correct: false},
+            {text: "roof roof roof roof", correct: false} 
+        ]
+        
+        
+        
+    },
+    {
+        question: "who let the cats out!?!?!?",
+        answers: [
+            {text: "meow", correct: false},
+            {text: "meow a meow", correct: true},
+            {text: " meow   meow meow", correct: false},
+            {text: "meow meow meow meow", correct: false} 
+        ]
+        
+        
+    },
+    {
+        question: "who let the birds out!?!?!?",
+        answers: [
+            {text: "chirp", correct: false},
+            {text: "chirp a chirp", correct: false},
+            {text: " chirp   chirp chirp", correct: true},
+            {text: "chirp chirp chirp chirp", correct: false} 
+        ]
+        
+        
+    },
+    {
+        question: "who let the bee's out!?!?!?",
+        answers: [
+            {text: "buzz", correct: false},
+            {text: "buzz a buzz", correct: false},
+            {text: " buzz   buzz buzz", correct: false},
+            {text: "buzz buzz buzz buzz", correct: true} 
         ]
         
         
