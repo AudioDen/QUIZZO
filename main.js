@@ -1,10 +1,12 @@
 var beginButton = document.getElementById("begin-btn") // this is the begin button on the html ....below to make it work.. on click
 beginButton.addEventListener("click" , beginGame)
 
-var continueButton = document.getElementById("continue-btn")//
-continueButton.addEventListener("click" ,function(){
-    currentQuestionsIndex++
-    setNextQuestion()
+var restartButton = document.getElementById("restart-btn")//
+restartButton.addEventListener("click" ,function(){
+    
+    
+    beginGame()
+    
 })
 
 
@@ -30,6 +32,7 @@ function setTime() {
             clearInterval(timerInterval)
             questboxElement.setAttribute("class", "hide")
             gameoverElement.setAttribute("class", "")
+            restartButton.classList.remove("hide")
         }
     }, 1000);
 }
@@ -62,7 +65,7 @@ function setNextQuestion(){
     showQuestion(mixoQuestions[currentQuestionsIndex])
 }
 function resetState(){
-    continueButton.classList.add("hide")
+    restartButton.classList.add("hide")
     while (choiceButtonElement.firstChild) {
         choiceButtonElement.removeChild
         (choiceButtonElement.firstChild)
@@ -115,7 +118,7 @@ function selectAnswer(e) {
     }
     currentQuestionsIndex++
     setNextQuestion()
-    continueButton.classList.remove("hide")
+    restartButton.classList.remove("hide")
 }
 /// got to getthe score happenung score variables
 
