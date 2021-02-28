@@ -4,8 +4,8 @@ beginButton.addEventListener("click" , beginGame)
 var restartButton = document.getElementById("restart-btn")//
 restartButton.addEventListener("click" ,function(){
     
-    
-    beginGame()
+    window.location.reload()
+    //beginGame()
     
 })
 
