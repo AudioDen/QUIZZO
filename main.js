@@ -20,7 +20,7 @@ var currentQuestionsIndex
 
 // this is the clock 
 var clockElement = document.getElementById("clock")
-var secondsLeft = 30
+var secondsLeft = 20
 function setTime() {
     console.log("the time")//// notes
     var timerInterval = setInterval(function() {
@@ -115,6 +115,7 @@ function selectAnswer(e) {
         txtRight.textContent = right
         total++;
         txtTotal.textContent = total
+        localStorage.setItem("total",total)
     }
     currentQuestionsIndex++
     setNextQuestion()
@@ -161,115 +162,87 @@ function sendImage() {
 
 var questions = [
     {
-        question: "who let the doggs out!?!?!?",
+        question: "html stands for!?!?!?",
         answers: [
-            {text: "roof", correct: true},
-            {text: "roof a roof", correct: false},
-            {text: " roof   roof roof", correct: false},
-            {text: "roof roof roof roof", correct: false} 
+            {text: "hey that music is loud", correct: false},
+            {text: "Hypertext Markup language", correct: true},
+            //{text: " roof   roof roof", correct: false},
+           // {text: "roof roof roof roof", correct: false} 
         ]
         
         
         
     },
     {
-        question: "who let the cats out!?!?!?",
+        question: " java and javascript are related programing languages!?!?!?",
         answers: [
-            {text: "meow", correct: false},
-            {text: "meow a meow", correct: true},
-            {text: " meow   meow meow", correct: false},
-            {text: "meow meow meow meow", correct: false} 
+            {text: "yup for sure", correct: false},
+            {text: "nope not at all", correct: true},
+            {text: "they are cousins from up north Ws.", correct: false},
+            {text: " they play for the packers", correct: false} 
         ]
         
         
     },
     {
-        question: "who let the birds out!?!?!?",
+        question: " css stands for!?!?!?",
         answers: [
-            {text: "chirp", correct: false},
-            {text: "chirp a chirp", correct: false},
-            {text: " chirp   chirp chirp", correct: true},
-            {text: "chirp chirp chirp chirp", correct: false} 
+            {text: "can't stop singing", correct: false},
+            {text: "cascading style sheets", correct: true},
+            {text: "cubs seriously? seriously??", correct: false},
+            
         ]
         
         
     },
     {
-        question: "who let the bee's out!?!?!?",
+        question: "what are the three types of css!?!?!?",
         answers: [
-            {text: "buzz", correct: false},
-            {text: "buzz a buzz", correct: false},
-            {text: " buzz   buzz buzz", correct: false},
-            {text: "buzz buzz buzz buzz", correct: true} 
+            {text: "red , blue , green", correct: false},
+            {text: "var, let, const", correct: false},
+            {text: "mild, hot, extra hot", correct: false},
+            {text: "inline, external, internal", correct: true} 
         ]
         
         
     },
-    // {
-    //     question: "who let the bee's out!?!?!?",
-    //     answers: [
-    //         {text: "buzz", correct: false},
-    //         {text: "buzz a buzz", correct: false},
-    //         {text: " buzz   buzz buzz", correct: false},
-    //         {text: "buzz buzz buzz buzz", correct: true} 
-    //     ]
+    {
+         question: " var, let, and const are!?!?!?",
+         answers: [
+             {text: "musical structues", correct: false},
+             {text: "three Wookiee's from Star Wars Trilogy", correct: false},
+             {text: "variables in Battlestar Galactica", correct: false},
+             {text: "variables in the javascript programing language", correct: true} 
+        ]
         
         
-    // },
-    // {
-    //     question: "who let the doggs out!?!?!?",
-    //     answers: [
-    //         {text: "roof", correct: true},
-    //         {text: "roof a roof", correct: false},
-    //         {text: " roof   roof roof", correct: false},
-    //         {text: "roof roof roof roof", correct: false} 
-    //     ]
+     },
+     {
+     question: "local storage is in the !?!?!?",
+         answers: [
+            {text: "browser", correct: true},
+            {text: "same city the user is in", correct: false},
+            {text: "in the storage place in the neighborhood your in", correct: false},
+             
+        ]
         
         
         
-    // },
-    // {
-    //     question: "who let the cats out!?!?!?",
-    //     answers: [
-    //         {text: "meow", correct: false},
-    //         {text: "meow a meow", correct: true},
-    //         {text: " meow   meow meow", correct: false},
-    //         {text: "meow meow meow meow", correct: false} 
-    //     ]
-        
-        
-    // },
-    // {
-    //     question: "who let the birds out!?!?!?",
-    //     answers: [
-    //         {text: "chirp", correct: false},
-    //         {text: "chirp a chirp", correct: false},
-    //         {text: " chirp   chirp chirp", correct: true},
-    //         {text: "chirp chirp chirp chirp", correct: false} 
-    //     ]
-        
-        
-    // },
-    // {
-    //     question: "who let the bee's out!?!?!?",
-    //     answers: [
-    //         {text: "buzz", correct: false},
-    //         {text: "buzz a buzz", correct: false},
-    //         {text: " buzz   buzz buzz", correct: false},
-    //         {text: "buzz buzz buzz buzz", correct: true} 
-    //     ]
-        
-        
-    // },
-    // {
-    //     question: "who let the bee's out!?!?!?",
-    //     answers: [
-    //         {text: "buzz", correct: false},
-    //         {text: "buzz a buzz", correct: false},
-    //         {text: " buzz   buzz buzz", correct: false},
-    //         {text: "buzz buzz buzz buzz", correct: true} 
-    //     ]
-        
-        
-    // },
+     },
+    
 ]
+
+/// if the total score is the highest
+//if the total score is the second highest
+///if the total score is the third highest////
+
+// there needs to be a comparison here from local strorage for previous scores????
+
+///// highest has to go to the one position
+ 
+//need a array to build for scores after each game played the array starts empty
+ //the scores have to be set in a array by number after each game 
+ //this array has to be limited to only the current value of the lowest numbe in the array 
+ //the arry shoul never be more than thre numbers  
+ //value has to be high to low then the index has to be used to fill the list 
+ //your gonna need a window*/

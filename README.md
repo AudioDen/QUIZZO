@@ -1,1 +1,3 @@
 # QUIZZO
+
+This is a simple quiz game.  To get a understanding of javascript, This project started from a youtube video of building a quiz.(web dev simplified, quiz app tutorial.) After using the video as reference. I began to build the website in the video and pick it apart to familiarize myself better with javascript. From pulling it apart and refering back to some of the class lessons and the help of my coach/tutor I was able to get it to function.  
