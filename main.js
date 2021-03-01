@@ -20,7 +20,7 @@ var currentQuestionsIndex
 
 // this is the clock 
 var clockElement = document.getElementById("clock")
-var secondsLeft = 20
+var secondsLeft = 15
 function setTime() {
     console.log("the time")//// notes
     var timerInterval = setInterval(function() {
@@ -196,7 +196,7 @@ var questions = [
         
     },
     {
-        question: "what are the three types of css!?!?!?",
+        question: "what are the three types of css(styling)!?!?!?",
         answers: [
             {text: "red , blue , green", correct: false},
             {text: "var, let, const", correct: false},
@@ -231,7 +231,8 @@ var questions = [
      },
     
 ]
-
+ //var scoreBox = getElementById.("score-input")
+  
 /// if the total score is the highest
 //if the total score is the second highest
 ///if the total score is the third highest////
