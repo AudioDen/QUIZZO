@@ -3,13 +3,9 @@ beginButton.addEventListener("click" , beginGame)
 
 var restartButton = document.getElementById("restart-btn")//
 restartButton.addEventListener("click" ,function(){
-    
     window.location.reload()
-    //beginGame()
-    
+    //beginGame() 
 })
-
-
 
 var questboxElement = document.getElementById("questbox")
 var questionElement = document.getElementById("question")
@@ -115,13 +111,13 @@ function selectAnswer(e) {
         txtRight.textContent = right
         total++;
         txtTotal.textContent = total
-        localStorage.setItem("total",total)
+        localStorage.setItem("total",total) // sets to storage
     }
     currentQuestionsIndex++
     setNextQuestion()
     restartButton.classList.remove("hide")
 }
-/// got to getthe score happenung score variables
+///  score variables
 
 var txtRight = document.getElementById("correct")
 var txtWrong = document.getElementById("wrong")
@@ -131,17 +127,13 @@ var right=  0
 var wrong=  0
 var total=  0
 
-
 // changes the button via css bassed on answer before selected
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        element.classList.add("correct")
-        
+        element.classList.add("correct") 
     } else {
-        element.classList.add("wrong") 
-        
-        
+        element.classList.add("wrong")    
     }
 }
 
@@ -166,12 +158,7 @@ var questions = [
         answers: [
             {text: "hey that music is loud", correct: false},
             {text: "Hypertext Markup language", correct: true},
-            //{text: " roof   roof roof", correct: false},
-           // {text: "roof roof roof roof", correct: false} 
-        ]
-        
-        
-        
+        ]  
     },
     {
         question: " java and javascript are related programing languages!?!?!?",
@@ -180,9 +167,7 @@ var questions = [
             {text: "nope not at all", correct: true},
             {text: "they are cousins from up north Ws.", correct: false},
             {text: " they play for the packers", correct: false} 
-        ]
-        
-        
+        ]  
     },
     {
         question: " css stands for!?!?!?",
@@ -191,9 +176,7 @@ var questions = [
             {text: "cascading style sheets", correct: true},
             {text: "cubs seriously? seriously??", correct: false},
             
-        ]
-        
-        
+        ]  
     },
     {
         question: "what are the three types of css(styling)!?!?!?",
@@ -202,9 +185,7 @@ var questions = [
             {text: "var, let, const", correct: false},
             {text: "mild, hot, extra hot", correct: false},
             {text: "inline, external, internal", correct: true} 
-        ]
-        
-        
+        ]   
     },
     {
          question: " var, let, and const are!?!?!?",
@@ -213,9 +194,7 @@ var questions = [
              {text: "three Wookiee's from Star Wars Trilogy", correct: false},
              {text: "variables in Battlestar Galactica", correct: false},
              {text: "variables in the javascript programing language", correct: true} 
-        ]
-        
-        
+        ] 
      },
      {
      question: "local storage is in the !?!?!?",
@@ -223,13 +202,8 @@ var questions = [
             {text: "browser", correct: true},
             {text: "same city the user is in", correct: false},
             {text: "in the storage place in the neighborhood your in", correct: false},
-             
-        ]
-        
-        
-        
-     },
-    
+        ]  
+     },   
 ]
  //var scoreBox = getElementById.("score-input")
   
